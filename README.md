@@ -115,19 +115,6 @@ Turnsole-AgentForge/
 └── docs/images/          # 应用截图
 ```
 
-## 💡 面试技术要点
-
-- **RAG 全链路**：文档解析（pypdf / python-docx）→ 中文切片（RecursiveCharacterTextSplitter 中文分隔符优化）→ BGE 向量化 → 余弦相似度检索 → 阈值过滤 → 上下文组装 → 流式生成
-- **多租户隔离**：MySQL 层 tenant_id 贯穿所有表 + ChromaDB 租户独立 collection 双重隔离
-- **流式架构**：FastAPI StreamingResponse + 原生 SSE 协议（event/data 帧），前端 fetch 流式解析渲染打字机效果
-- **幻觉控制**：检索空结果时通过 System Prompt 约束模型诚实拒答；命中阈值 SCORE_THRESHOLD 可调
-- **工程细节**：后台任务异步摄取不阻塞上传接口、bcrypt 密码哈希、JWT 认证、CORS 白名单、上传文件类型白名单校验
-
-## 🔒 安全说明
-
-- `.env` 已加入 `.gitignore`，DeepSeek API Key 不会提交（建议完成开发后到官网轮换 Key）
-- 生产部署请修改 `SECRET_KEY`、启用 HTTPS、配置独立数据库账号
-
 ## 🌱 关于名字
 
 **Turnsole**（/ˈtɜːrnsoʊl/）意为「向日花」——追逐阳光转动的植物。项目以向日葵为品牌图腾：**知识是阳光，智能体是追光的向日花**。
