@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Element Plus 主题色：向日葵金 ---------- */
+
+:root {
+  --el-color-primary: #f5a623;
+  --el-color-primary-light-3: #f8ba52;
+  --el-color-primary-light-5: #fad28a;
+  --el-color-primary-light-7: #fce7bd;
+  --el-color-primary-light-8: #fdf2d9;
+  --el-color-primary-light-9: #fef8ec;
+  --el-color-primary-dark-2: #c4881d;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-size: 15px;
+  color: #2c3038;
+  background: linear-gradient(165deg, #fdf9ec 0%, #faf7ef 45%, #f4f2ea 100%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e8d5a8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d9bf85;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #f7b733, #e8930c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.25s ease;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.page-desc {
+  color: #8a919e;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ---------- 按钮统一：向日葵金渐变主按钮 ---------- */
+
+.el-button--primary {
+  --el-button-bg-color: #f5a623;
+  --el-button-border-color: #f5a623;
+  --el-button-hover-bg-color: #f7b733;
+  --el-button-hover-border-color: #f7b733;
+  --el-button-active-bg-color: #c4881d;
+  --el-button-active-border-color: #c4881d;
+  --el-button-disabled-bg-color: #f8d9a0;
+  --el-button-disabled-border-color: #f8d9a0;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.el-button {
+  border-radius: 10px;
+}
+
+/* ---------- 输入框 / 文本域：圆角 + 聚焦光晕 ---------- */
+
+.el-input__wrapper,
+.el-textarea__inner,
+.el-select__wrapper {
+  border-radius: 10px !important;
+  transition: box-shadow 0.2s ease;
+}
+
+.el-input__wrapper.is-focus,
+.el-select__wrapper.is-focused {
+  box-shadow: 0 0 0 1px #f5a623 inset, 0 0 0 3px rgba(245, 166, 35, 0.15) !important;
+}
+
+.el-textarea__inner:focus {
+  box-shadow: 0 0 0 1px #f5a623 inset, 0 0 0 3px rgba(245, 166, 35, 0.15) !important;
+}
+
+.el-input__wrapper:hover,
+.el-select__wrapper:hover {
+  box-shadow: 0 0 0 1px #f8d9a0 inset !important;
+}
+
+/* ---------- 对话框：大圆角 + 标题加粗 ---------- */
+
+.el-dialog {
+  border-radius: 16px;
+}
+
+.el-dialog__title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.el-dialog__header {
+  padding: 22px 24px 12px;
+}
+
+.el-dialog__body {
+  padding: 8px 24px;
+}
+
+/* ---------- 表单标签 ---------- */
+
+.el-form-item__label {
+  font-weight: 600;
+  color: #4a5060;
+}
+
+/* top 布局下 label 占满整行，让 label 行内的控件组（风格选择器 / AI 按钮）真正靠右 */
+.el-form-item--label-top .el-form-item__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.stat-card .el-statistic__number {
+  font-size: 28px;
+}
+
+/* ---------- Markdown 渲染 ---------- */
+
+.markdown-body pre {
+  background: #f6f8fa;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 13px;
+}
+
+.markdown-body code {
+  background: #f0f2f5;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.markdown-body p {
+  margin: 6px 0;
+  line-height: 1.7;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 20px;
+  margin: 6px 0;
+  line-height: 1.7;
+}
